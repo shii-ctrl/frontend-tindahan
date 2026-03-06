@@ -4,24 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add a Product</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Add a Product</h1>
-    <div id="container" style="display: flex">
-      <div id="form" style="padding-right: 5rem; display: inline;"> 
-        <form>
-          <label>Item Name</label>
-          <input type="text" id="itemName" name="itemName" required />
-          <label>Price</label>
-          <input type="text" id="price" name="price" required />
-          <label>Quantity</label>
-          <input type="text" id="quantity" name="quantity" required />
-          <label>Supplier</label>
-          <input type="text" id="supplier" name="supplier" required />
-          <button type="submit" id = "add">Add Product</button>
+    <header>
+      <h1>Add a Product</h1>
+    </header>
+
+    <main id="container">
+      <section id="form-wrapper">
+        <form id="product-form">
+          <div class="field">
+            <label for="itemName">Item Name</label>
+            <input type="text" id="itemName" name="itemName" required />
+          </div>
+          <div class="field">
+            <label for="price">Price</label>
+            <input type="text" id="price" name="price" required />
+          </div>
+          <div class="field">
+            <label for="quantity">Quantity</label>
+            <input type="text" id="quantity" name="quantity" required />
+          </div>
+          <div class="field">
+            <label for="supplier">Supplier</label>
+            <input type="text" id="supplier" name="supplier" required />
+          </div>
+          <button type="submit" id="add">Add Product</button>
         </form>
-    </div>
-    <ul id="content"></ul>
+      </section>
+
+      <section id="list-wrapper">
+        <ul id="content"></ul>
+      </section>
+    </main>
+
     <script src="index.js"></script>
   </body>
 </html>
